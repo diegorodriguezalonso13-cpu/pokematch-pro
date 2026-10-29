@@ -77,3 +77,41 @@ console.log("Array original:", [...pokemonList]);
 const shuffledPokemon = shuffleCards(pokemonList);
 
 console.log("Array barajado (Fisher-Yates):", shuffledPokemon);
+
+/**
+ * Obtiene los datos de un Pokémon desde la PokéAPI
+ * @param {string|number} pokemonId - Nombre o ID del Pokémon
+ * @returns {Object|null} Objeto con el nombre y la URL del sprite o null si hay error
+ */
+async function fetchPokemonData(pokemonId) {
+  try {
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${pokemonId}`,
+    );
+
+    if (!response.ok) {
+      throw new Error(`Error HTTP: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    return {
+      name: data.name,
+      image: data.sprites.front_default,
+    };
+  } catch (error) {
+    console.error("No se pudo recuperar el Pokémon:", error);
+    return null;
+  }
+}
+
+// Prueba de carga asíncrona de un Pokémon específico
+async function testApiConnection() {
+  console.log("[PokéMatch Pro] Consultando la PokéAPI...");
+  const pokemon = await fetchPokemonData("pikachu");
+  if (pokemon) {
+    console.log("Pokémon obtenido con éxito:", pokemon);
+  }
+}
+
+testApiConnection();
