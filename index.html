@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PokéMatch Pro - Juego de Memoria Pokémon</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéMatch Pro - Juego de Memoria Pokémon</title>
+  </head>
+  <body>
 
-  <!-- ENCABEZADO Y MARCADOR -->
-  <header>
-    <h1>PokéMatch Pro</h1>
-    <p>Encuentra todas las parejas de Pokémon en el menor tiempo posible.</p>
-    
-    <section>
-      <h2>Estadísticas de la Partida</h2>
-      <div>
-        <span>Movimientos:</span>
-        <span id="moves-count">0</span>
-      </div>
-      <div>
-        <span>Parejas:</span>
-        <span id="pairs-count">0 / 6</span>
-      </div>
-      <div>
-        <span>Tiempo:</span>
-        <span id="timer">00:00</span>
-      </div>
-      <button type="button" id="restart-btn">Reiniciar Juego</button>
-    </section>
-  </header>
+    <!-- ENCABEZADO Y MARCADOR -->
+    <header>
+      <h1>PokéMatch Pro</h1>
+      <p>Encuentra todas las parejas de Pokémon en el menor tiempo posible.</p>
 
-  <!-- TABLERO DE JUEGO -->
-  <main>
-    <section id="game-board">
-      <p>[El tablero de cartas se generará dinámicamente con JavaScript]</p>
-    </section>
-  </main>
+      <section>
+        <h2>Estadísticas de la Partida</h2>
+        <div>
+          <span>Movimientos:</span>
+          <!-- Marcador de ejemplo en index.html -->
+          <span id="moves-count">0</span>
+        </div>
+        <div>
+          <span>Parejas:</span>
+          <!-- Marcador de ejemplo en index.html -->
+          <span id="pairs-count">0 / 6</span>
+        </div>
+        <div>
+          <span>Tiempo:</span>
+          <span id="timer">00:00</span>
+        </div>
+        <button type="button" id="restart-btn">Reiniciar Juego</button>
+      </section>
+    </header>
 
-  <!-- PIE DE PÁGINA -->
-  <footer>
-    <p>Proyecto desarrollado para el módulo DWEC - DAW</p>
-  </footer>
+    <!-- TABLERO DE JUEGO -->
+    <main>
+      <section id="game-board">
+        <p>[El tablero de cartas se generará dinámicamente con JavaScript]</p>
+      </section>
+    </main>
 
-</body>
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>Proyecto desarrollado para el módulo DWEC - DAW</p>
+    </footer>
+    <!-- Vinculación al final del body -->
+    <script src="main.js" defer></script>
+
+  </body>
 </html>
